@@ -1,3 +1,6 @@
+
+
+
 'use strict';
 
 var React = require('react-native');
@@ -21,7 +24,14 @@ var ListItem = React.createClass({
             imageUri = thumbs.medium || thumbs.high || thumbs.default;
 
         return (    
-            <Text>{data.videoId}</Text>
+            <TouchableHighlight onPress={() => this.props.onPress(data)} style={styles.container}>
+                <View style={styles.row}>
+                    <Image source={{uri : imageUri, width : 80, height : 50}} style={{marginRight : 10}} />
+                    <Text style={styles.text}>
+                        {data.title}
+                    </Text>
+                </View>
+            </TouchableHighlight>
         );
     }
 

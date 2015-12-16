@@ -19,8 +19,8 @@ var {
 var YTViewer = React.createClass({
     render: function() {
         var initialRoute = {
-                title     : 'Test',
-                component : YouTubeList,
+                title           : 'Test',
+                component       : YouTubeList,
                 componentConfig : {
                     data : YouTubeJSON
                 }
