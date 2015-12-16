@@ -3,24 +3,25 @@ This project is designed to be used by the React DC hack night: http://www.meetu
 
 The following steps are designed to get the project rolling.
 
-## Configure React Native on your Mac
+##Preparing the project
+### Configure React Native on your Mac
 https://facebook.github.io/react-native/docs/getting-started.html
 
-## Initiate the project
-Create a project (from terminal): 
-    react-native init YTViewer
+### Initiate the project
+Clone this project:
+```
+git clone git@github.com:ModusCreateOrg/react-dc-workshop-2016-12-16.git
+```
 
-
-## Install react-native-youtube
+### Install modules
 In terminal: 
 
 ```
-cd YTViewer/
+cd react-dc-workshop-2016-12-16/
+npm install
 ```
 
-Follow these installation instructions: https://github.com/paramaggarwal/react-native-youtube#installation
-
-## Patch react-native-youtube
+### Patch react-native-youtube
 
 react-native-youtube is not currently compatible with v0.16.0 of React native, so we need to patch it. Don't worry, it's not that hard!
 
@@ -47,5 +48,6 @@ replace with
 ```
     [self.bridge.uiManager addUIBlock:^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, UIView *> *viewRegistry) {
 ```
+
 
 
